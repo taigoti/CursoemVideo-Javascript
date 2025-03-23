@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1 id="hora"></h1>
+<h2 id="dia"></h2>
+<body>
+    <script>
+        let date = new Date()
+        let currentHour = date.getHours()
+        let currentDay = date.getDay()
+        let week = ['domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado']
+        currentDay = week[currentDay]
+
+        let docHora = document.querySelector('#hora')
+        let docDia = document.querySelector('#dia')
+
+        docHora.innerHTML = `são ${currentHour} horas.`
+        docDia.innerHTML = `hoje é ${currentDay}. `
+
+        if(currentDay == 'sábado' || currentDay == 'domingo') {
+            docDia.innerHTML += 'fim de semana.'
+        }else {
+            docDia.innerHTML += 'dia útil.'
+        }
+    </script>
+</body>
+</html>

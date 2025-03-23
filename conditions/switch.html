@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <h1 id="time"></h1>
+  <body>
+    <script>
+      let currentDate = new Date();
+      let hour = currentDate.getHours();
+
+      let currentHour = document.querySelector("#time");
+
+      switch (hora) {
+        case 1:
+          currentHour.innerHTML =
+            "agora são 1 AM, já passou da hora de dormir!";
+          break;
+        case 5:
+          currentHour.innerHTML = "agora são 5 AM, hora do remédio!";
+          break;
+        case 11:
+          currentHour.innerHTML = "agora são 11 AM, hora do almoço";
+          break;
+        case 19:
+          currentHour.innerHTML = "agora são 7 PM, hora de jantar!";
+          break;
+        case 23:
+          currentHour.innerHTML = "agora são 11 PM, hora de dormir";
+          break;
+        default:
+          currentHour.innerHTML = `agora são ${currentHour}.`;
+          break;
+      }
+    </script>
+  </body>
+</html>

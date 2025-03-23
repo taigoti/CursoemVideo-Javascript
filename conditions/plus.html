@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>somando valores</h1>
+    <input type="number" name="num1" id="num1" />+
+    <input type="number" name="num2" id="num2" />
+    <input type="button" value="soma" id="soma" />
+    <p id="result">resultado</p>
+
+    <script>
+      let button = document.querySelector("#soma");
+      let result = document.querySelector("#result");
+
+      button.addEventListener("click", function () {
+        let num1 = Number(document.querySelector("#num1").value); //o .value é necessário em inputs, porque quando pegamos atribuímos um input em uma variável, ele retorna um objeto input
+        let num2 = Number(document.querySelector("#num2").value); //o Number() converte o valor de string para number, seja int ou float
+        let soma = num1 + num2;
+
+        result.innerHTML = `a soma entre ${num1} e ${num2} é ${soma}.</br>`;
+
+        if (soma > 100) {
+          result.innerHTML += `${soma} é maior que 100!`;
+        } else if (soma == 100) {
+          result.innerHTML += `a soma foi igual a 100!`;
+        } else {
+          result.innerHTML += `${soma} é menor que 100.`;
+        }
+      });
+    </script>
+  </body>
+</html>
